@@ -35,8 +35,10 @@ header{
 .movie{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
+    gap: 2rem;
 }
 
 
@@ -102,3 +104,13 @@ header{
 
 
 
+.supp{
+    background-color: red;
+    border: none;
+    padding: 2rem;
+    border-radius: 3rem;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}

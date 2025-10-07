@@ -17,4 +17,7 @@
             </div>
         </div>
     </div>
+    <form method="post" >
+        <button type="submit" name="submit" class="supp">Supprimer</button>
+    </form>
 </section>

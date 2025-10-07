@@ -1,6 +1,5 @@
 <?php
 require_once(__DIR__ . "/../models/MovieModel.php");
-require_once(__DIR__ . "/../public/index.php");
 
 class MovieController
 {
@@ -19,7 +18,14 @@ class MovieController
         $moviemodel = new MovieModel();
         $movie = $moviemodel->get($id);
 
-        
+        if (isset($_POST["submit"])) {
+            $moviemodel->del($id);
+            header("Location: http://localhost:8080/");
+            exit;
+        }
+
+
+
 
 
         require_once(__DIR__ . "/../views/layout.php");
