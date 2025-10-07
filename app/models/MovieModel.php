@@ -40,10 +40,15 @@ class MovieModel
                 $movie["name"],
                 $movie["release_date"],
                 $movie["genre"],
-                $movie["author"]
+                $movie["author"],
+                $movie["id"]
             );
         }
     }
+
+    /**
+     * @return MoveEntity[]
+     */
     public function getAll(): array
     {
         $getAllMovie = $this->bdd->prepare("SELECT * FROM movie");
@@ -56,7 +61,8 @@ class MovieModel
                 $movie["name"],
                 $movie["release_date"],
                 $movie["genre"],
-                $movie["author"]
+                $movie["author"],
+                $movie["id"]
             );
         }
         return $MoviesEntity;

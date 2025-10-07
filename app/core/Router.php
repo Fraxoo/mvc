@@ -7,7 +7,7 @@ require_once(__DIR__."/../controllers/NotFoundController.php");
 class Router{
     public static function getController(string $controllerName){
         switch ($controllerName) {
-            case 'Movie':
+            case 'movie':
                 return new MovieController();
                 break;
 
