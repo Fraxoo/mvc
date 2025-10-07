@@ -46,6 +46,26 @@ class MovieModel
         }
     }
 
+    public function search($name): MovieEntity | NULL
+    {
+        $getMovie = $this->bdd->prepare("SELECT * FROM movie WHERE name = :name");
+        $getMovie->execute([
+            "name" => $name
+        ]);
+        $movie = $getMovie->fetch();
+        if (!$movie) {
+            return NULL;
+        } else {
+            return new MovieEntity(
+                $movie["name"],
+                $movie["release_date"],
+                $movie["genre"],
+                $movie["author"],
+                $movie["id"]
+            );
+        }
+    }
+
     /**
      * @return MoveEntity[]
      */
@@ -129,7 +149,7 @@ class MovieEntity
     {
         $this->author = $author;
     }
-    public function getAuhtor()
+    public function getAuthor()
     {
         return $this->author;
     }
@@ -160,7 +180,8 @@ class DiffusionModel
         ]);
     }
 
-    public function del($movie_id){
+    public function del($movie_id)
+    {
         $delMovie = $this->bdd->prepare("DELETE * FROM diffusion WHERE movie_id = :movie_id");
         $delMovie->execute([
             "movie_id" => $movie_id
@@ -176,7 +197,7 @@ class DiffusionEntity
     private DateTime $date_diffusion;
     // Getters et Setters...
 
-    function __construct($movie_id,$date_diffusion)
+    function __construct($movie_id, $date_diffusion)
     {
         $this->movie_id = $movie_id;
         $this->date_diffusion = $date_diffusion;

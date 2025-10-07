@@ -1,5 +1,6 @@
 <?php
 require_once(__DIR__ . "/../models/MovieModel.php");
+require_once(__DIR__ . "/../public/index.php");
 
 class MovieController
 {
@@ -17,6 +18,9 @@ class MovieController
 
         $moviemodel = new MovieModel();
         $movie = $moviemodel->get($id);
+
+        
+
 
         require_once(__DIR__ . "/../views/layout.php");
 
