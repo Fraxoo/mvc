@@ -15,14 +15,7 @@ class AddController
     public function add($params = [])
     {
 
-        if(isset($_POST["name"]) && isset($_POST["author"]) && isset($_POST["genre"]) && isset($_POST["release_date"]) ){
-            $moviemodel = new MovieModel();
-            $name = $_POST["name"];
-            $genre = $_POST["genre"];
-            $author = $_POST["author"];
-            $release_date = date('Y-m-d', strtotime($_POST['release_date']));
-            $moviemodel->add($name,$release_date,$genre,$author);
-        }
+        
 
         require_once(__DIR__ . "/../views/layout.php");
         require_once(__DIR__ . "/../views/add-movie.php");

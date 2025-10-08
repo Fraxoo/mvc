@@ -18,11 +18,7 @@ class MovieController
         $moviemodel = new MovieModel();
         $movie = $moviemodel->get($id);
 
-        if (isset($_POST["submit"])) {
-            $moviemodel->del($id);
-            header("Location: http://localhost:8080/");
-            exit;
-        }
+        
 
 
 

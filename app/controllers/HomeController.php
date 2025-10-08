@@ -20,11 +20,7 @@ class HomeController
         $movieModel = new MovieModel();
         $movies = $movieModel->getAll();
 
-        if(isset($_POST["search-bar"])){
-            $search = $_POST["search-bar"];
-            $result = $movieModel->search($search);
-
-        }
+        
 
         require_once(__DIR__ . "/../views/layout.php");
         require_once(__DIR__ . "/../views/home.php");
