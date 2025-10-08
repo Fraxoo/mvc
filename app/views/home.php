@@ -2,11 +2,11 @@
     <div class="width home">
         <h1>Film et diffusion</h1>
         <div class="movie-list">
-            <template>
+            <template id="movie-list">
                 <div class="single-movie">
                     <img src="">
-                    <p>name</p>
-                    <p>diffusion</p>
+                    <p id="name">name</p>
+                    <p id="diffusion">diffusion</p>
                 </div>
             </template>
         </div>
