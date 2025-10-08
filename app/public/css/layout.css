@@ -22,7 +22,7 @@ header {
     width: 64rem;
 }
 
-.home-background {
+.layout-background {
     width: 100%;
     background-color: #fecc00;
     display: flex;
@@ -33,7 +33,7 @@ header {
     
 }
 
-.home {
+.layout {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,7 +41,7 @@ header {
     margin-top: 0.5rem;
 }
 
-.home img {
+.layout img {
     width: 10rem;
 }
 

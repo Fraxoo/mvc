@@ -1,7 +1,7 @@
 <header>
-    <div class="home-background">
+    <div class="layout-background">
         <div class="width">
-            <div class="home">
+            <div class="layout">
                 <a href="http://localhost:8080/"><img src="https://fr.web.img6.acsta.net/commons/v9/allocine/logo-custom/logo-ssm25-white.svg"> </a>
                 <form id="search_form" method="post">
                     <div class="search">
