@@ -1,6 +1,8 @@
 
 
 
+
+
 movies.forEach(movie => {
     const template = document.querySelector("#movie-list");
     const cloneTemplate = template.content.cloneNode(true);

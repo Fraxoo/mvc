@@ -158,3 +158,29 @@ header {
 
 
 
+
+
+
+#search-results {
+  position: absolute;
+  background: white;
+  color: black;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  max-width: 500px;
+  width: 100%;
+  margin-top: 5px;
+  z-index: 2000;
+}
+
+.result-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.result-item:hover {
+  background-color: #f5f5f5;
+}

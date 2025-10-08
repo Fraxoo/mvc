@@ -46,25 +46,18 @@ class MovieModel
         }
     }
 
-    public function search($name): MovieEntity | NULL
+    public function search(string $query): array
     {
-        $getMovie = $this->bdd->prepare("SELECT * FROM movie WHERE name = :name");
-        $getMovie->execute([
-            "name" => $name
-        ]);
-        $movie = $getMovie->fetch();
-        if (!$movie) {
-            return NULL;
-        } else {
-            return new MovieEntity(
-                $movie["name"],
-                $movie["release_date"],
-                $movie["genre"],
-                $movie["author"],
-                $movie["id"]
-            );
-        }
+        $stmt = $this->bdd->prepare("
+        SELECT * FROM movie
+        WHERE name LIKE :query
+           OR genre LIKE :query
+           OR author LIKE :query
+    ");
+        $stmt->execute(['query' => "%$query%"]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
 
     /**
      * @return MoveEntity[]
@@ -107,7 +100,7 @@ class MovieEntity
     }
 
 
-     public function toArray(): array
+    public function toArray(): array
     {
         return [
             "id" => $this->id,

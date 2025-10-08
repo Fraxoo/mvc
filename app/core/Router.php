@@ -5,6 +5,7 @@ require_once(__DIR__."/../controllers/HomeController.php");
 require_once(__DIR__."/../controllers/NotFoundController.php");
 require_once(__DIR__."/../controllers/AddController.php");
 
+
 class Router{
     public static function getController(string $controllerName){
         switch ($controllerName) {
@@ -14,6 +15,10 @@ class Router{
 
             case 'add' :
                 return new AddController();
+                break;
+
+            case 'home' :
+                return new HomeController();
                 break;
 
             case '':

@@ -5,8 +5,14 @@
                 <a href="http://localhost:8080/"><img src="https://fr.web.img6.acsta.net/commons/v9/allocine/logo-custom/logo-ssm25-white.svg"> </a>
                 <form id="search_form" method="post">
                     <div class="search">
-                        <input type="search" placeholder="Rechercher un film, une série, une star..." name="search">
-                        <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <div>
+                            <input id="search-bar" type="search" placeholder="Rechercher un film, une série, une star..." name="search">
+                            <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                        <div id="search-results">
+                            <img>
+                            <p></p>
+                        </div>
                     </div>
                 </form>
                 <div class="hidden">
@@ -37,3 +43,4 @@
     </div>
 </header>
 
+<script src="../public/js/layout.js"></script>
