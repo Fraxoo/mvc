@@ -19,5 +19,6 @@ class AddController
 
         require_once(__DIR__ . "/../views/layout.php");
         require_once(__DIR__ . "/../views/add-movie.php");
+        require_once(__DIR__ . "/../views/footer.php");
     }
 }

@@ -85,7 +85,7 @@ class MovieModel
                 $movie["id"]
             );
         }
-        return $MoviesEntity;
+        return array_map(fn($m) => $m->toArray(), $MoviesEntity);
     }
 }
 
@@ -104,6 +104,18 @@ class MovieEntity
         $this->setGenre($genre);
         $this->setAuthor($author);
         $this->id = $id;
+    }
+
+
+     public function toArray(): array
+    {
+        return [
+            "id" => $this->id,
+            "name" => $this->name,
+            "release_date" => $this->release_date,
+            "genre" => $this->genre,
+            "author" => $this->author
+        ];
     }
 
 

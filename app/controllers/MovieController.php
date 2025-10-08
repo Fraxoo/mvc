@@ -27,5 +27,6 @@ class MovieController
         require_once(__DIR__ . "/../views/layout.php");
 
         require_once(__DIR__ . "/../views/single-movie.php");
+        require_once(__DIR__ . "/../views/footer.php");
     }
 }

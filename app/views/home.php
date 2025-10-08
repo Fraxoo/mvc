@@ -1,3 +1,22 @@
-<div class="width home">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure repudiandae consectetur dolore accusantium distinctio. Quis veritatis necessitatibus blanditiis, quisquam esse nisi ducimus, cumque nulla dolorum quo sunt, cupiditate pariatur.</p>
-</div>
+<main>
+    <div class="width home">
+        <h1>Film et diffusion</h1>
+        <div class="movie-list">
+            <template>
+                <div class="single-movie">
+                    <img src="">
+                    <p>name</p>
+                    <p>diffusion</p>
+                </div>
+            </template>
+        </div>
+    </div>
+</main>
+
+
+
+
+<script>
+    const movies = <?= json_encode($movies) ?>
+</script>
+<script src="../public/js/home.js"></script>
