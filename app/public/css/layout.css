@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.width {
+    width: 64rem;
+}
+
+.home-background {
+    width: 100%;
+    background-color: #fecc00;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+.home img {
+    width: 10rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.hidden {
+    display: hidden;
+    width: 15rem;
+}
+
+.search{
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
+.search-button{
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+
+.search-button:hover{
+    background-color: rgb(128, 128, 128,0.2);
+    
+}
+
+
+
+.fa-magnifying-glass{
+    color: black;
+}
+
+#search_form input{
+    width: 21rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    opacity: 0.6;
+    font-weight: bold;
+}
+
+#search_form input:focus{
+    outline: none;
+    opacity: 0.9;
+
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    align-items: center;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.hover{
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.hover:hover{
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.left-nav-bar{
+    display: flex;
+    align-items: center;
+}
+
+.open{
+    background-color: white;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.below-header-background{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 0.3rem 0;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.below-header-nav{
+    display: flex;
+    gap: 1rem;
+}
+
+.below-header-nav a:hover{
+    color: rgb(106, 153, 252);
+}
+
+.below-header-nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 0.9rem;
+}
