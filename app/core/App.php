@@ -6,7 +6,9 @@ const ROOT_APP_PATH = "first_mvc";
 
 class App{
     public static function start(){
-        $uri = str_replace(ROOT_APP_PATH,"",$_SERVER["REQUEST_URI"]);
+        // Use only the path part of the URI (remove query string) before routing
+        $path = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
+        $uri = str_replace(ROOT_APP_PATH, "", $path);
 
         $uri_elements = explode("/",$uri);
 

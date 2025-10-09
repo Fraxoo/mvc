@@ -55,7 +55,19 @@ class MovieModel
            OR author LIKE :query
     ");
         $stmt->execute(['query' => "%$query%"]);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        $MoviesEntity = [];
+        foreach ($movies as $movie) {
+            $MoviesEntity[] = new MovieEntity(  //test si on a besoin de mettre [] apres Moviesentitty
+                $movie["name"],
+                $movie["release_date"],
+                $movie["genre"],
+                $movie["author"],
+                $movie["id"]
+            );
+        }
+        return array_map(fn($m) => $m->toArray(), $MoviesEntity);
     }
 
 

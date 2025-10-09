@@ -5,6 +5,8 @@ require_once(__DIR__."/../controllers/HomeController.php");
 require_once(__DIR__."/../controllers/NotFoundController.php");
 require_once(__DIR__."/../controllers/AddController.php");
 require_once(__DIR__."/../controllers/LayoutController.php");
+require_once(__DIR__."/../controllers/ResultController.php");
+
 
 
 class Router{
@@ -22,6 +24,11 @@ class Router{
 
             case 'home' :
                 return new HomeController();
+                return new LayoutController();
+                break;
+
+            case 'result' :
+                return new ResultController();
                 return new LayoutController();
                 break;
 
