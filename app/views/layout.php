@@ -9,14 +9,14 @@
                             <input id="search-bar" type="search" placeholder="Rechercher un film, une série, une star..." name="search">
                             <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
-                        <div id="search-results">
+                        <div class="hidden" id="search-results">
                             <img>
                             <p></p>
                         </div>
                     </div>
                 </form>
-                <div class="hidden">
-                    <p class="hidden"></p>
+                <div class="hidden-div">
+                    <p class="hidden-div"></p>
                 </div>
             </div>
         </div>
