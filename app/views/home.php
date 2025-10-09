@@ -19,6 +19,5 @@
 
 
 <script>
-    const movies = <?= json_encode($movies) ?>
 </script>
 <script src="../public/js/home.js"></script>

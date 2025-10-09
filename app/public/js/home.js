@@ -1,22 +1,16 @@
 
 
 
-
+const template = document.querySelector("#movie-list");
+const movieList = document.querySelector(".movie-list");
 
 movies.forEach(movie => {
-    const template = document.querySelector("#movie-list");
-    const cloneTemplate = template.content.cloneNode(true);
-    const lien = cloneTemplate.querySelector("a");
-    const image = cloneTemplate.querySelector("img");
-    const name = cloneTemplate.querySelector("#name");
-    const diffusion = cloneTemplate.querySelector("#diffusion");
+  const clone = template.content.cloneNode(true);
 
-    lien.setAttribute("href", `http://localhost:8080/movie/show/${movie.id}`);
-    image.setAttribute("src", "https://picsum.photos/200/300")
-    name.textContent = movie.name;
-    diffusion.textContent = "diffusion";
+  clone.querySelector("a").href = `http://localhost:8080/movie/show/${movie.id}`;
+  clone.querySelector("img").src = "https://picsum.photos/200/300";
+  clone.querySelector("#name").textContent = movie.name;
+  clone.querySelector("#diffusion").textContent = "diffusion";
 
-    const movieList = document.querySelector(".movie-list");
-    movieList.appendChild(cloneTemplate);
+  movieList.appendChild(clone);
 });
-

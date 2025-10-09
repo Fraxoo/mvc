@@ -5,16 +5,30 @@
                 <a href="http://localhost:8080/"><img src="https://fr.web.img6.acsta.net/commons/v9/allocine/logo-custom/logo-ssm25-white.svg"> </a>
                 <form id="search_form" method="post">
                     <div class="search">
-                        <div>
-                            <input id="search-bar" type="search" placeholder="Rechercher un film, une série, une star..." name="search">
-                            <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        </div>
-                        <div class="hidden" id="search-results">
-                            <img>
-                            <p></p>
-                        </div>
+                        <input
+                            id="search-bar"
+                            type="search"
+                            placeholder="Rechercher un film, une série, une star..."
+                            name="search">
+                        <button class="search-button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+
+                        <!-- 🔹 Zone où les résultats s'afficheront -->
+                        <div id="search-results" class="reset"></div>
+
+                        <!-- 🔹 Modèle invisible pour chaque résultat mettre le template en dehors pour eviter de le vider avec innerhtml = ""; -->
+                        <template id="results-template">
+                            <a>
+                                <div class="search-result-item">
+                                    <img>
+                                    <p></p>
+                                </div>
+                            </a>
+                        </template>
                     </div>
                 </form>
+
                 <div class="hidden-div">
                     <p class="hidden-div"></p>
                 </div>
@@ -43,4 +57,7 @@
     </div>
 </header>
 
+<script>
+    const movies = <?= json_encode($movies) ?>
+</script>
 <script src="../public/js/layout.js"></script>

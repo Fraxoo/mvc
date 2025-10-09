@@ -3,7 +3,7 @@
 require_once(__DIR__ . "/../models/MovieModel.php");
 
 
-class HomeController
+class LayoutController
 {
     public function view(string $method, array $params = [])
     {
@@ -14,7 +14,7 @@ class HomeController
         }
     }
 
-    public function home($params = [])
+    public function search($params = [])
     {
 
         $movieModel = new MovieModel();
@@ -23,7 +23,5 @@ class HomeController
 
 
         require_once(__DIR__ . "/../views/layout.php");
-        require_once(__DIR__ . "/../views/home.php");
-        require_once(__DIR__ . "/../views/footer.php");
     }
 }
