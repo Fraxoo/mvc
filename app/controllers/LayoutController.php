@@ -14,9 +14,11 @@ class LayoutController
         }
     }
 
-    public function search($params = [])
+    public function layout($params = [])
     {
-
+        if(isset($_GET["search"])){
+            header("location: http://localhost:8080/result/".$_GET["search"]);
+        }
         
 
 

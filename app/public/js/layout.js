@@ -1,6 +1,7 @@
 const searchBar_elem = document.querySelector("#search-bar");
 const resultsContainer = document.querySelector("#search-results");
 const resultTemplate = document.querySelector("#results-template");
+const searchForm = document.querySelector('#search_form');
 //  console.log(movies);
 
 searchBar_elem.addEventListener("input", async (e) => {
@@ -24,4 +25,12 @@ searchBar_elem.addEventListener("input", async (e) => {
   } catch (err) {
     // ignore
   }
+});
+
+// On submit, navigate to /result/search/<query>
+searchForm?.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const q = searchBar_elem.value.trim();
+  if (!q) return;
+  window.location.href = `/result/search/${encodeURIComponent(q)}`;
 });

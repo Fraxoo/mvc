@@ -14,27 +14,22 @@ class Router{
         switch ($controllerName) {
             case 'movie':
                 return new MovieController();
-                return new LayoutController();
                 break;
 
             case 'add' :
                 return new AddController();
-                return new LayoutController();
                 break;
 
             case 'home' :
                 return new HomeController();
-                return new LayoutController();
                 break;
 
             case 'result' :
                 return new ResultController();
-                return new LayoutController();
                 break;
 
             case '':
                 return new HomeController();
-                return new LayoutController();
                 break;
             default:
                 // Si aucune route de match
